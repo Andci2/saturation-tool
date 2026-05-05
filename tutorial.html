@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
-<title>How to use this · Saturation Studio</title>
+<title>Come si usa · Saturation Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +80,7 @@ th { color: var(--text-muted); font-weight: 500; font-size: 10px; text-transform
 <div class="wrap">
 
 <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 18px;">
-  <a class="back" href="index.html" style="margin:0">← Back to the tool</a>
+  <a class="back" href="index.html" style="margin:0">← Torna allo strumento</a>
   <a href="https://odylicmedia.com" target="_blank" rel="noopener" title="By Odylic" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; border:none;">
     <span style="font-size:10px; color: var(--text-muted); letter-spacing:0.06em;">by <strong style="color: var(--text-secondary); font-weight:500">Odylic</strong></span>
     <img src="odylic-icon.png" alt="Odylic" style="width:22px; height:22px; border-radius:5px; opacity:0.85;" />
@@ -88,123 +88,123 @@ th { color: var(--text-muted); font-weight: 500; font-size: 10px; text-transform
 </div>
 
 <div class="eyebrow">Tutorial</div>
-<h1>How to use this</h1>
-<div class="lede">Read this once. Five minutes. The tool's not complicated, but the inputs that matter aren't the obvious ones.</div>
+<h1>Come si usa</h1>
+<div class="lede">Leggilo una volta. Cinque minuti. Lo strumento non è complicato, ma gli input che contano non sono quelli ovvi.</div>
 
-<h2>1. Get your CSV</h2>
-<p>You need daily spend and revenue, ideally one row per day for the last 365 days. The CSV needs four columns:</p>
+<h2>1. Ottieni il tuo CSV</h2>
+<p>Hai bisogno di spesa e ricavi giornalieri, idealmente una riga al giorno per gli ultimi 365 giorni. Il CSV ha bisogno di quattro colonne:</p>
 <table>
-  <thead><tr><th>Column</th><th>What goes in it</th></tr></thead>
+  <thead><tr><th>Colonna</th><th>Cosa inserire</th></tr></thead>
   <tbody>
-    <tr><td><code>date</code></td><td>YYYY-MM-DD, one row per day</td></tr>
-    <tr><td><code>spend</code></td><td>Total ad spend that day, in dollars (no $ sign, no commas)</td></tr>
-    <tr><td><code>revenue</code></td><td>Attributed revenue from those ads that day</td></tr>
-    <tr><td><code>purchases</code></td><td>Order count. Optional but recommended. Drives the orders/new-customer columns.</td></tr>
+    <tr><td><code>date</code></td><td>YYYY-MM-DD, una riga al giorno</td></tr>
+    <tr><td><code>spend</code></td><td>Spesa pubblicitaria totale quel giorno, in dollari (senza il simbolo $, senza virgole)</td></tr>
+    <tr><td><code>revenue</code></td><td>Ricavi attribuiti da quegli annunci quel giorno</td></tr>
+    <tr><td><code>purchases</code></td><td>Numero ordini. Opzionale ma consigliato. Guida le colonne ordini/nuovi clienti.</td></tr>
   </tbody>
 </table>
-<p>Pull this from wherever you trust your numbers. Meta Ads Manager export, your data warehouse, Triple Whale, Northbeam, a Google Sheet you've been keeping by hand. Doesn't matter. The tool only cares that the columns are right and the dates are sequential.</p>
-<p>One channel at a time. If you run Meta and Google, model them separately. They have different curves. Don't add them together.</p>
+<p>Estrailo da dove ti fidi dei tuoi numeri. Esportazione da Meta Ads Manager, il tuo data warehouse, Triple Whale, Northbeam, un Google Sheet che tieni a mano. Non importa. Lo strumento vuole solo che le colonne siano corrette e le date sequenziali.</p>
+<p>Un canale alla volta. Se usi Meta e Google, modellali separatamente. Hanno curve diverse. Non sommarli.</p>
 <div class="callout">
-  <strong>Attribution choice matters.</strong> Pick one window (7-day click, 1-day click + 1-day view, whatever) and stick with it across all 365 days. If you switched mid-year, the curve fit will be a mess.
+  <strong>La scelta dell'attribuzione conta.</strong> Scegli una finestra (7 giorni click, 1 giorno click + 1 giorno view, qualunque cosa) e mantienila per tutti i 365 giorni. Se hai cambiato a metà anno, il fit della curva sarà un disastro.
 </div>
 
-<h2>2. Upload it</h2>
-<p>Drag the CSV onto the upload card or click "Choose CSV file." If you just want to poke around first, hit "Try with demo data". That loads a synthetic 90-day dataset so you can see what a working fit looks like before you bring your own numbers.</p>
-<p>Nothing is uploaded anywhere. The fit runs in your browser. Close the tab and the data is gone.</p>
+<h2>2. Caricalo</h2>
+<p>Trascina il CSV sulla scheda di caricamento oppure clicca "Scegli file CSV". Se vuoi esplorare prima, premi "Prova con dati demo". Carica un dataset sintetico di 90 giorni così puoi vedere come appare un fit funzionante prima di portare i tuoi numeri.</p>
+<p>Non viene caricato nulla da nessuna parte. Il fit gira nel browser. Chiudi la scheda e i dati sono andati.</p>
 
-<h2>3. Read the chart</h2>
-<p>The chart axes:</p>
+<h2>3. Leggi il grafico</h2>
+<p>Gli assi del grafico:</p>
 <ul>
-  <li><strong>X-axis:</strong> daily ad spend in dollars.</li>
-  <li><strong>Left Y-axis:</strong> dollars (revenue, contribution margin, the LTV-extended CM lines if you turn them on).</li>
-  <li><strong>Right Y-axis:</strong> ROAS multiplier.</li>
+  <li><strong>Asse X:</strong> spesa pubblicitaria giornaliera in dollari.</li>
+  <li><strong>Asse Y sinistro:</strong> dollari (ricavi, margine di contribuzione, le linee CM con LTV se le attivi).</li>
+  <li><strong>Asse Y destro:</strong> moltiplicatore ROAS.</li>
 </ul>
-<p>The lines:</p>
+<p>Le linee:</p>
 <ul>
-  <li><strong>Revenue (orange area):</strong> the fitted Hill curve. This is what the model thinks revenue does as you push spend up.</li>
-  <li><strong>CM/day (green):</strong> day-1 contribution margin: revenue × (1 − VC%) − spend. Where this is below zero, you lose money on day-1 economics alone.</li>
-  <li><strong>ROAS (black):</strong> revenue / spend at each spend level.</li>
-  <li><strong>Marginal ROAS (gray dashed):</strong> what the next dollar of spend earns. Always lower than average ROAS once you're past the elbow.</li>
-  <li><strong>Breakeven (blue vertical):</strong> spend level where day-1 CM = 0. If this line doesn't appear, you're below breakeven across the entire spend range.</li>
-  <li><strong>Today (gray dashed vertical):</strong> your current daily spend. Set automatically from the CSV average; override in the inputs.</li>
-  <li><strong>Selected goal optimum (orange vertical):</strong> the spend the model recommends for whichever goal you picked in the dropdown.</li>
+  <li><strong>Ricavi (area arancione):</strong> la curva Hill fittata. È quello che il modello pensa che facciano i ricavi mentre aumenti la spesa.</li>
+  <li><strong>CM/giorno (verde):</strong> margine di contribuzione giorno-1: ricavi × (1 − VC%) − spesa. Dove questo è sotto zero, perdi soldi solo con l'economia del giorno-1.</li>
+  <li><strong>ROAS (nero):</strong> ricavi / spesa a ogni livello di spesa.</li>
+  <li><strong>ROAS marginale (grigio tratteggiato):</strong> quanto guadagna il prossimo euro di spesa. Sempre inferiore al ROAS medio una volta superato il gomito.</li>
+  <li><strong>Pareggio (verticale blu):</strong> livello di spesa dove CM giorno-1 = 0. Se questa riga non appare, sei sotto il pareggio sull'intera gamma di spesa.</li>
+  <li><strong>Oggi (verticale grigio tratteggiato):</strong> la tua spesa giornaliera attuale. Impostata automaticamente dalla media del CSV; sovrascrivibile negli input.</li>
+  <li><strong>Ottimo obiettivo selezionato (verticale arancione):</strong> la spesa che il modello raccomanda per l'obiettivo scelto nel menu a tendina.</li>
 </ul>
 
-<h2>4. The LTV multipliers are where you make or break this</h2>
-<p>This is the section everyone gets wrong, including the defaults the tool ships with.</p>
-<p>The LTV multipliers say: for every $1 a customer spends on their first order, how many dollars total will they spend over the next 3 / 6 / 12 months? A 1.4× three-month LTV means $1 first-order → $1.40 cumulative over 90 days.</p>
-<p>The defaults (1.4 / 1.8 / 2.5) are vague mid-tier DTC averages. They're almost certainly wrong for your brand. Specifically:</p>
+<h2>4. I moltiplicatori LTV sono dove si vince o si perde</h2>
+<p>Questa è la sezione che tutti sbagliano, incluse le impostazioni predefinite dello strumento.</p>
+<p>I moltiplicatori LTV dicono: per ogni $1 che un cliente spende al primo ordine, quanti dollari totali spenderà nei successivi 3 / 6 / 12 mesi? Un LTV a tre mesi di 1,4× significa $1 primo ordine → $1,40 cumulativi in 90 giorni.</p>
+<p>I valori predefiniti (1,4 / 1,8 / 2,5) sono medie vaghe DTC di fascia media. Quasi certamente non sono corretti per il tuo brand. Nello specifico:</p>
 <ul>
-  <li><strong>Consumables, supplements, anything you reorder:</strong> LTV multipliers are higher (think 1.6× / 2.5× / 4.0× or more).</li>
-  <li><strong>Jewelry, furniture, mattresses, anything bought once a year or for gifts:</strong> LTV multipliers are lower (think 1.1× / 1.3× / 1.6×).</li>
-  <li><strong>Subscriptions:</strong> totally different shape. The multiplier accumulates as long as people stay subscribed.</li>
+  <li><strong>Consumabili, integratori, tutto ciò che si riordina:</strong> i moltiplicatori LTV sono più alti (pensa a 1,6× / 2,5× / 4,0× o più).</li>
+  <li><strong>Gioielli, mobili, materassi, tutto ciò che si acquista una volta l'anno o come regalo:</strong> i moltiplicatori LTV sono più bassi (pensa a 1,1× / 1,3× / 1,6×).</li>
+  <li><strong>Abbonamenti:</strong> forma totalmente diversa. Il moltiplicatore si accumula finché le persone restano abbonate.</li>
 </ul>
-<p>Pull your real numbers from a cohort tool: Lifetimely, Triple Whale, Polar, a manual cohort export from Shopify. Take 90-day cumulative customer revenue, divide by first-order revenue. That's your 3-month multiplier. Same for 180 and 365 days.</p>
+<p>Recupera i tuoi numeri reali da uno strumento di coorte: Lifetimely, Triple Whale, Polar, un'esportazione manuale di coorte da Shopify. Prendi i ricavi cumulativi del cliente a 90 giorni, dividi per i ricavi del primo ordine. Questo è il tuo moltiplicatore a 3 mesi. Lo stesso per 180 e 365 giorni.</p>
 <div class="callout">
-  <strong>If you skip this step, the tool gives you wrong answers.</strong> A swing from 1.4× to 1.2× on the 3-month multiplier flips the recommendation from "scale up 70%" to "pull back to almost zero."
+  <strong>Se salti questo passaggio, lo strumento ti dà risposte sbagliate.</strong> Un'oscillazione da 1,4× a 1,2× sul moltiplicatore a 3 mesi ribalta la raccomandazione da "scala del 70%" a "ritirati quasi a zero".
 </div>
 
-<h2>5. The other inputs, in order of how much they matter</h2>
+<h2>5. Gli altri input, in ordine di importanza</h2>
 
-<h3>Variable cost %</h3>
-<p>What share of revenue gets eaten by COGS, shipping, payment processing before any margin shows up. Don't include fixed overhead. This is the part that scales with each order. Most DTC brands land between 30% and 45%. Get this from your P&amp;L or your finance person.</p>
+<h3>Costo variabile %</h3>
+<p>Quale quota dei ricavi viene assorbita da COGS, spedizione e commissioni di pagamento prima che appaia qualsiasi margine. Non includere costi fissi generali. È la parte che scala con ogni ordine. La maggior parte dei brand DTC si posiziona tra il 30% e il 45%. Recuperalo dal tuo P&amp;L o dal tuo responsabile finanziario.</p>
 
-<h3>Recency half-life</h3>
-<p>Default is 60 days. This says: a day from 60 days ago counts half as much as today in the curve fit. Older days still count, just less.</p>
-<p>Use a shorter half-life (30d) if you've recently done something that changed efficiency: new creative, a price change, a structural Meta change you can feel. Use a longer half-life (180d+) if your account has been stable and you want the curve to lean on more data.</p>
-<p>Set to 0 to weight every day equally (legacy behavior). This is rarely what you want. Efficiency drifts.</p>
+<h3>Emivita recency</h3>
+<p>L'impostazione predefinita è 60 giorni. Questo significa: un giorno di 60 giorni fa conta la metà di oggi nel fit della curva. I giorni più vecchi contano ancora, solo meno.</p>
+<p>Usa un'emivita più corta (30 giorni) se di recente hai fatto qualcosa che ha cambiato l'efficienza: nuovi creativi, un cambio di prezzo, un cambiamento strutturale di Meta che senti. Usa un'emivita più lunga (180 giorni+) se il tuo account è stato stabile e vuoi che la curva si basi su più dati.</p>
+<p>Imposta a 0 per pesare ogni giorno ugualmente (comportamento legacy). Raramente è quello che vuoi. L'efficienza deriva.</p>
 
-<h3>NC share %</h3>
-<p>Share of attributed revenue from new customers vs returning customers. If your platform reports this directly, plug it in. Otherwise approximate from your customer count over the same window. Drives the "NC ROAS" and "new customers" columns in the spend ladder.</p>
+<h3>Quota NC %</h3>
+<p>Quota di ricavi attribuiti da nuovi clienti rispetto ai clienti di ritorno. Se la tua piattaforma lo riporta direttamente, inseriscilo. Altrimenti approssima dal conteggio clienti nella stessa finestra. Guida le colonne "ROAS NC" e "nuovi clienti" nella tabella di spesa.</p>
 
-<h3>Adstock decay (λ)</h3>
-<p>Yesterday's spend still produces some revenue today. Adstock models that lag. Try 0.3 for Meta. That's the typical carryover. 0 to disable it (lets you sanity-check whether adstock is what's making the optima move).</p>
+<h3>Decadimento adstock (λ)</h3>
+<p>La spesa di ieri produce ancora qualche ricavo oggi. L'adstock modella quel lag. Prova 0,3 per Meta. È il tipico carryover. 0 per disabilitarlo (ti permette di verificare se è l'adstock a far spostare gli ottimi).</p>
 
-<h3>Efficiency adjust ±%</h3>
-<p>Manual override on V_max. +10% = "I expect the platform to deliver 10% better than the historical fit." Use this for known forward-looking changes the data hasn't seen yet: a creative refresh you're confident in, a new placement that's testing well.</p>
+<h3>Efficienza adj. ±%</h3>
+<p>Override manuale su V_max. +10% = "Mi aspetto che la piattaforma performi il 10% meglio del fit storico." Usalo per cambiamenti futuri noti che i dati non hanno ancora visto: un aggiornamento creativo in cui credi, un nuovo posizionamento che sta testando bene.</p>
 
-<h3>Median AOV</h3>
-<p>Auto-calculated from your CSV if you included <code>purchases</code>. Otherwise enter manually. Only affects the orders / new-customer columns in the spend ladder, not the curve or optima.</p>
+<h3>AOV mediano</h3>
+<p>Calcolato automaticamente dal CSV se hai incluso <code>purchases</code>. Altrimenti inseriscilo manualmente. Influisce solo sulle colonne ordini / nuovi clienti nella tabella di spesa, non sulla curva o sugli ottimi.</p>
 
-<h2>6. The goal selector</h2>
-<p>Pick the goal you actually want to optimize for. The tool computes all goals at the same time (you can see all of them in the tile row at the top), but the goal dropdown picks which one gets the highlighted vertical line on the chart and the highlighted row in the spend ladder.</p>
+<h2>6. Il selettore obiettivo</h2>
+<p>Scegli l'obiettivo che vuoi realmente ottimizzare. Lo strumento calcola tutti gli obiettivi contemporaneamente (puoi vederli tutti nella riga di riquadri in alto), ma il menu obiettivo sceglie quale ottiene la riga verticale evidenziata sul grafico e la riga evidenziata nella tabella di spesa.</p>
 <table>
-  <thead><tr><th>Goal</th><th>What the optimum is</th></tr></thead>
+  <thead><tr><th>Obiettivo</th><th>Cos'è l'ottimo</th></tr></thead>
   <tbody>
-    <tr><td>Max CM (today)</td><td>Spend that maximizes day-1 contribution margin only.</td></tr>
-    <tr><td>Max 3-month CM</td><td>Spend that maximizes CM with 3-month LTV factored in.</td></tr>
-    <tr><td>Max 6-month CM</td><td>Same with 6-month LTV.</td></tr>
-    <tr><td>Max 12-month CM</td><td>Same with 12-month LTV.</td></tr>
-    <tr><td>Max Revenue</td><td>Push spend up. Hill curve is monotone, so this is "as high as we'll model" (5× current).</td></tr>
-    <tr><td>Max NC Revenue</td><td>Same logic but counting only new-customer revenue.</td></tr>
-    <tr><td>Target ROAS</td><td>Max spend that still hits a ROAS target you set. Inputs appear when you select this goal.</td></tr>
+    <tr><td>Max CM (oggi)</td><td>Spesa che massimizza il margine di contribuzione del giorno-1 soltanto.</td></tr>
+    <tr><td>Max CM 3 mesi</td><td>Spesa che massimizza il CM con LTV a 3 mesi.</td></tr>
+    <tr><td>Max CM 6 mesi</td><td>Lo stesso con LTV a 6 mesi.</td></tr>
+    <tr><td>Max CM 12 mesi</td><td>Lo stesso con LTV a 12 mesi.</td></tr>
+    <tr><td>Max Ricavi</td><td>Spingere la spesa verso l'alto. La curva Hill è monotona, quindi questo equivale a "il massimo che modelleremo" (5× attuale).</td></tr>
+    <tr><td>Max Ricavi NC</td><td>Stessa logica ma contando solo i ricavi da nuovi clienti.</td></tr>
+    <tr><td>ROAS target</td><td>Spesa massima che raggiunge ancora un ROAS target che imposti tu. Gli input appaiono quando selezioni questo obiettivo.</td></tr>
   </tbody>
 </table>
 
-<h2>7. What this tool can't do</h2>
-<p>It's a single-channel observational model. Some things it doesn't account for:</p>
+<h2>7. Cosa questo strumento non può fare</h2>
+<p>È un modello osservazionale a canale singolo. Alcune cose che non considera:</p>
 <ul>
-  <li><strong>It uses reported revenue, not incremental.</strong> Platforms over-attribute. The fitted curve is steeper than the actual causal one. A geo lift study (GeoLift, Haus, etc.) tells you the real number.</li>
-  <li><strong>It's stationary.</strong> The fit assumes the curve is stable across the window. If you've been changing creative, audiences, placements, the curve shifts and yesterday's fit doesn't predict tomorrow. The recency half-life setting helps with this; refitting monthly helps more.</li>
-  <li><strong>Recommendations past your observed spend range are extrapolation.</strong> If your data tops out at $20K/day and the tool recommends $50K, that's a model guess based on Hill curve shape, not evidence. Treat as directional.</li>
-  <li><strong>Cash flow timing isn't in the math.</strong> "Profitable at 12 months" is true on paper but you spent the cash on day 1. If working capital is tight, do the discounted version yourself.</li>
-  <li><strong>No cross-channel.</strong> Meta and Google halo each other. Modeling Meta alone misses some of that.</li>
+  <li><strong>Usa i ricavi riportati, non quelli incrementali.</strong> Le piattaforme sovra-attribuiscono. La curva fittata è più ripida di quella causale reale. Uno studio di geo lift (GeoLift, Haus, ecc.) ti dice il numero reale.</li>
+  <li><strong>È stazionario.</strong> Il fit assume che la curva sia stabile nella finestra. Se hai cambiato creativi, audience, posizionamenti, la curva si sposta e il fit di ieri non predice domani. L'impostazione dell'emivita recency aiuta; rifittare mensilmente aiuta di più.</li>
+  <li><strong>Le raccomandazioni oltre la tua gamma di spesa osservata sono estrapolazioni.</strong> Se i tuoi dati arrivano a $20K/giorno e lo strumento raccomanda $50K, questa è una stima del modello basata sulla forma della curva Hill, non un'evidenza. Trattala come indicativa.</li>
+  <li><strong>Il timing del flusso di cassa non è nella matematica.</strong> "Redditizio a 12 mesi" è vero sulla carta ma hai speso i soldi il giorno 1. Se il capitale circolante è limitato, fai tu la versione scontata.</li>
+  <li><strong>Nessuna cross-channel.</strong> Meta e Google si influenzano a vicenda. Modellare solo Meta manca parte di questo effetto alone.</li>
 </ul>
 
-<h2>8. A reasonable workflow</h2>
+<h2>8. Un workflow ragionevole</h2>
 <ol>
-  <li>Pull 365 days of daily spend + revenue for one channel.</li>
-  <li>Get your real LTV multipliers from a cohort tool. Plug them in.</li>
-  <li>Set VC% from your P&amp;L, NC share from platform reporting.</li>
-  <li>Set recency half-life to 60 days unless you have a reason to go shorter or longer.</li>
-  <li>Pick the goal you actually care about. For most brands the right answer is 6-month or 12-month CM, not day-1.</li>
-  <li>Look at the optimum. Compare to today.</li>
-  <li>If the optimum is meaningfully higher than current spend, scale into it gradually. Don't jump straight to the recommended dollar figure. The model says nothing about how fast the auction can absorb new budget without breaking efficiency.</li>
-  <li>Refit monthly. Re-pull the CSV, reload the tool. The curve drifts.</li>
+  <li>Recupera 365 giorni di spesa giornaliera + ricavi per un canale.</li>
+  <li>Ottieni i tuoi moltiplicatori LTV reali da uno strumento di coorte. Inseriscili.</li>
+  <li>Imposta VC% dal tuo P&amp;L, quota NC dal reporting della piattaforma.</li>
+  <li>Imposta l'emivita recency a 60 giorni a meno che tu non abbia un motivo per andare più corto o più lungo.</li>
+  <li>Scegli l'obiettivo che ti interessa davvero. Per la maggior parte dei brand la risposta giusta è CM a 6 o 12 mesi, non il giorno-1.</li>
+  <li>Guarda l'ottimo. Confrontalo con oggi.</li>
+  <li>Se l'ottimo è significativamente superiore alla spesa attuale, scala gradualmente verso di esso. Non saltare direttamente alla cifra raccomandata. Il modello non dice nulla su quanto velocemente l'asta può assorbire nuovo budget senza rompere l'efficienza.</li>
+  <li>Rifitta mensilmente. Ri-esporta il CSV, ricarica lo strumento. La curva deriva.</li>
 </ol>
 
 <div class="foot">
-  Saturation Studio · MIT licensed · <a href="index.html">Back to the tool</a> · <a href="https://github.com/peterquads/saturation-tool" target="_blank" rel="noopener">Source on GitHub</a>
+  Saturation Studio · Licenza MIT · <a href="index.html">Torna allo strumento</a> · <a href="https://github.com/peterquads/saturation-tool" target="_blank" rel="noopener">Sorgente su GitHub</a>
 </div>
 
 </div>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <title>Saturation Studio</title>
@@ -446,47 +446,47 @@ input[type=file] { display: none; }
       <img src="odylic-icon.png" alt="Odylic" />
     </a>
   </div>
-  <h1>Where does your next ad dollar break even?</h1>
+  <h1>Dove raggiunge il pareggio il tuo prossimo euro pubblicitario?</h1>
   <div class="muted" style="max-width: 720px; font-size: 13px;">
-    Upload daily ad spend + revenue. Get a Hill saturation curve, optimal-spend recommendations across 3-, 6-, and 12-month LTV horizons, and a scenario chart you can tune live. Runs entirely in your browser. Your CSV never leaves your machine.
+    Carica spesa pubblicitaria e ricavi giornalieri. Ottieni una curva di saturazione Hill, raccomandazioni di spesa ottimale su orizzonti LTV a 3, 6 e 12 mesi, e un grafico di scenario modificabile in tempo reale. Funziona interamente nel browser. Il tuo CSV non lascia mai il tuo dispositivo.
   </div>
 
   <div id="dropzone" class="upload-card">
     <div class="icon">↑</div>
-    <div class="primary-line">Drop a CSV here</div>
-    <div class="secondary-line">columns: <code>date</code> · <code>spend</code> · <code>revenue</code> · <code>purchases</code> (optional)</div>
+    <div class="primary-line">Trascina un CSV qui</div>
+    <div class="secondary-line">colonne: <code>date</code> · <code>spend</code> · <code>revenue</code> · <code>purchases</code> (opzionale)</div>
     <div class="actions">
-      <button class="btn primary" id="btnPick">Choose CSV file</button>
-      <button class="btn" id="btnDemo">Try with demo data</button>
-      <a href="template.csv" download class="btn-link">↓ Download sample CSV</a>
+      <button class="btn primary" id="btnPick">Scegli file CSV</button>
+      <button class="btn" id="btnDemo">Prova con dati demo</button>
+      <a href="template.csv" download class="btn-link">↓ Scarica CSV di esempio</a>
     </div>
-    <div class="tutorial-link"><a href="tutorial.html">How to use this →</a></div>
+    <div class="tutorial-link"><a href="tutorial.html">Come si usa →</a></div>
     <input type="file" id="fileInput" accept=".csv,text/csv" />
   </div>
   <div id="parseError" class="error app-hidden"></div>
 
   <div class="info-grid">
     <div class="card">
-      <h3>What it does</h3>
+      <h3>Cosa fa</h3>
       <ul>
-        <li>Fits a <strong>Hill saturation curve</strong> to your daily spend → revenue: <code>r = V·s^h / (K^h + s^h)</code></li>
-        <li>Computes <strong>optimal daily spend</strong> for seven goals including 3m, 6m, and 12m LTV-extended CM</li>
-        <li>Tunes <strong>VC %, NC share, LTV multipliers, adstock decay, target ROAS, and recency weighting</strong> live</li>
-        <li>Per-month curves with seasonality fallback so November ≠ February</li>
+        <li>Adatta una <strong>curva di saturazione Hill</strong> alla tua spesa → ricavi giornalieri: <code>r = V·s^h / (K^h + s^h)</code></li>
+        <li>Calcola la <strong>spesa giornaliera ottimale</strong> per sette obiettivi, incluso il CM LTV esteso a 3m, 6m e 12m</li>
+        <li>Regola <strong>VC %, quota NC, moltiplicatori LTV, decadimento adstock, ROAS target e ponderazione recency</strong> in tempo reale</li>
+        <li>Curve mensili con fallback stagionale: novembre ≠ febbraio</li>
       </ul>
     </div>
     <div class="card">
-      <h3>CSV format</h3>
+      <h3>Formato CSV</h3>
       <table>
-        <thead><tr><th>Column</th><th>Format</th></tr></thead>
+        <thead><tr><th>Colonna</th><th>Formato</th></tr></thead>
         <tbody>
           <tr><td><code>date</code></td><td>YYYY-MM-DD</td></tr>
-          <tr><td><code>spend</code></td><td>daily $</td></tr>
-          <tr><td><code>revenue</code></td><td>daily $</td></tr>
-          <tr><td><code>purchases</code></td><td>order count <span class="muted">(optional)</span></td></tr>
+          <tr><td><code>spend</code></td><td>$ giornalieri</td></tr>
+          <tr><td><code>revenue</code></td><td>$ giornalieri</td></tr>
+          <tr><td><code>purchases</code></td><td>numero ordini <span class="muted">(opzionale)</span></td></tr>
         </tbody>
       </table>
-      <div class="muted" style="margin-top: 8px; font-size: 10.5px">90+ days recommended. 365 gives the most stable fit. Days with $0 spend or $0 revenue are dropped automatically.</div>
+      <div class="muted" style="margin-top: 8px; font-size: 10.5px">Si consigliano 90+ giorni. 365 fornisce il fit più stabile. I giorni con $0 di spesa o $0 di ricavi vengono eliminati automaticamente.</div>
     </div>
   </div>
 </div>
@@ -501,8 +501,8 @@ input[type=file] { display: none; }
       <span class="by"><strong>Odylic</strong> · Saturation Studio</span>
     </a>
     <span style="margin-left: auto"></span>
-    <a class="btn ghost" href="tutorial.html" target="_blank" rel="noopener">How to use</a>
-    <button class="btn ghost" id="btnReload">↑ Upload different CSV</button>
+    <a class="btn ghost" href="tutorial.html" target="_blank" rel="noopener">Come si usa</a>
+    <button class="btn ghost" id="btnReload">↑ Carica un altro CSV</button>
   </div>
   <h1 id="title" style="margin-top: 6px"></h1>
   <div class="muted" id="subtitle"></div>
@@ -512,42 +512,42 @@ input[type=file] { display: none; }
 
   <div class="row">
     <div class="atelier-section">
-      <h2>Inputs</h2>
+      <h2>Parametri</h2>
 
       <div class="section-h">Brand</div>
       <div class="row-input">
-        <span class="label-grp"><label>Name</label></span>
+        <span class="label-grp"><label>Nome</label></span>
         <span class="value-grp"><span class="ctl"><input id="brand" type="text"/></span></span>
       </div>
 
-      <div class="section-h">Period</div>
+      <div class="section-h">Periodo</div>
       <div class="row-input">
-        <span class="label-grp"><label>Project month</label><span class="tip" data-tip="Which calendar month you're modeling. Uses that month's per-month curve fit if it has 8+ days of data, otherwise falls back to the global curve scaled by month-of-year seasonality.">?</span></span>
+        <span class="label-grp"><label>Mese proiettato</label><span class="tip" data-tip="Il mese del calendario che stai modellando. Usa il fit mensile di quel mese se ha 8+ giorni di dati, altrimenti ricade sulla curva globale scalata per stagionalità del mese dell'anno.">?</span></span>
         <span class="value-grp"><span class="ctl"><select id="month">
-          <option value="0">January</option><option value="1">February</option><option value="2">March</option>
-          <option value="3">April</option><option value="4">May</option><option value="5">June</option>
-          <option value="6">July</option><option value="7">August</option><option value="8">September</option>
-          <option value="9">October</option><option value="10">November</option><option value="11">December</option>
+          <option value="0">Gennaio</option><option value="1">Febbraio</option><option value="2">Marzo</option>
+          <option value="3">Aprile</option><option value="4">Maggio</option><option value="5">Giugno</option>
+          <option value="6">Luglio</option><option value="7">Agosto</option><option value="8">Settembre</option>
+          <option value="9">Ottobre</option><option value="10">Novembre</option><option value="11">Dicembre</option>
         </select></span></span>
       </div>
       <div class="row-input">
-        <span class="label-grp"><label>Goal</label><span class="tip" data-tip="Which optimum gets the highlighted vertical line on the chart and the highlighted row in the spend ladder. All goals are computed simultaneously; this just picks which one to focus on.">?</span></span>
+        <span class="label-grp"><label>Obiettivo</label><span class="tip" data-tip="Quale ottimo ottiene la riga verticale evidenziata sul grafico e la riga evidenziata nella tabella di spesa. Tutti gli obiettivi vengono calcolati simultaneamente; questo sceglie solo su quale concentrarsi.">?</span></span>
         <span class="value-grp"><span class="ctl"><select id="goal">
-          <option value="cm">Max CM (today)</option>
-          <option value="cm_3m" selected>Max 3-month CM</option>
-          <option value="cm_6m">Max 6-month CM</option>
-          <option value="cm_12m">Max 12-month CM</option>
-          <option value="revenue">Max Revenue</option>
-          <option value="nc_rev">Max NC Revenue</option>
-          <option value="target_roas">Target ROAS</option>
+          <option value="cm">Max CM (oggi)</option>
+          <option value="cm_3m" selected>Max CM 3 mesi</option>
+          <option value="cm_6m">Max CM 6 mesi</option>
+          <option value="cm_12m">Max CM 12 mesi</option>
+          <option value="revenue">Max Ricavi</option>
+          <option value="nc_rev">Max Ricavi NC</option>
+          <option value="target_roas">ROAS target</option>
         </select></span></span>
       </div>
 
       <!-- Target ROAS appears only when that goal is selected -->
       <div id="trGroup" class="tr-group">
-        <div class="label-line">Target ROAS settings</div>
+        <div class="label-line">Impostazioni ROAS target</div>
         <div class="row-input">
-          <span class="label-grp"><label>Target</label><span class="tip" data-tip="The ROAS you want to maintain. The tool finds the maximum daily spend that still hits this number on the saturation curve. If the target is higher than the model's peak ROAS, it'll flag as unreachable.">?</span></span>
+          <span class="label-grp"><label>Target</label><span class="tip" data-tip="Il ROAS che vuoi mantenere. Lo strumento trova la spesa giornaliera massima che raggiunge ancora questo numero sulla curva di saturazione. Se il target è superiore al ROAS di picco del modello, verrà segnalato come irraggiungibile.">?</span></span>
           <span class="value-grp">
             <span class="ctl"><input id="tr" type="number" step="0.1"/><span class="unit">×</span></span>
           </span>
@@ -555,73 +555,73 @@ input[type=file] { display: none; }
         <div class="hint-row" id="trhint"></div>
       </div>
 
-      <div class="section-h">Customer economics</div>
+      <div class="section-h">Economia del cliente</div>
       <div class="row-input">
-        <span class="label-grp"><label>Variable cost</label><span class="tip" data-tip="% of revenue lost to per-order costs BEFORE ad spend (COGS, shipping, payment fees, sales tax if you eat it). Ad spend is its own line, subtracted separately. Contribution margin = revenue × (1 - this) - ad spend. Don't include fixed overhead (rent, salaries, software) since CM is the number you have left BEFORE paying those. 30-40% typical for DTC.">?</span></span>
+        <span class="label-grp"><label>Costo variabile</label><span class="tip" data-tip="% di ricavi persi nei costi per ordine PRIMA della spesa pubblicitaria (COGS, spedizione, commissioni di pagamento, IVA se la assorbi). La spesa pubblicitaria è una riga a parte, sottratta separatamente. Margine di contribuzione = ricavi × (1 - questo) - spesa pubblicitaria. Non includere costi fissi (affitto, stipendi, software): il CM è ciò che rimane PRIMA di pagarli. 30-40% tipico per DTC.">?</span></span>
         <span class="value-grp"><span class="ctl"><input id="vc" type="number" step="1"/><span class="unit">%</span></span></span>
       </div>
       <div class="row-input">
-        <span class="label-grp"><label>NC share</label><span class="tip" data-tip="Share of attributed revenue from new customers vs returning customers. Drives the NC ROAS and new-customer columns in the spend ladder. Pull from your platform or CRM.">?</span></span>
+        <span class="label-grp"><label>Quota NC</label><span class="tip" data-tip="Quota di ricavi attribuiti da nuovi clienti rispetto ai clienti di ritorno. Guida le colonne ROAS NC e nuovi clienti nella tabella di spesa. Recupera dalla tua piattaforma o CRM.">?</span></span>
         <span class="value-grp"><span class="ctl"><input id="nc" type="number" step="1"/><span class="unit">%</span></span></span>
       </div>
       <div class="row-input">
-        <span class="label-grp"><label>AOV</label><span class="tip" data-tip="Average order value, in dollars. Auto-calculated as the median across your daily revenue/purchases when a purchases column is present in the CSV. Drives the orders and new-customer projections in the spend ladder.">?</span></span>
+        <span class="label-grp"><label>AOV</label><span class="tip" data-tip="Valore medio dell'ordine, in dollari. Calcolato automaticamente come mediana dei ricavi/acquisti giornalieri quando è presente la colonna purchases nel CSV. Guida le proiezioni di ordini e nuovi clienti nella tabella di spesa.">?</span></span>
         <span class="value-grp"><span class="ctl"><input id="aov" type="number" step="1"/><span class="unit">$</span></span></span>
       </div>
 
-      <div class="section-h"><span>LTV horizons</span><span class="tip tip-right" data-tip="Cumulative customer revenue at each horizon ÷ first-order revenue. 1.4× means every $1 of first-order revenue earns another $0.40 over 90 days. Pull these from your cohort tool. Generic defaults will give you the wrong answer.">?</span></div>
+      <div class="section-h"><span>Orizzonti LTV</span><span class="tip tip-right" data-tip="Ricavi cumulativi del cliente a ogni orizzonte ÷ ricavi del primo ordine. 1,4× significa che ogni $1 di ricavi del primo ordine genera altri $0,40 in 90 giorni. Recupera questi dati dal tuo strumento di coorte. I valori predefiniti generici ti daranno la risposta sbagliata.">?</span></div>
       <div class="row-input">
-        <span class="label-grp"><label>3-month LTV</label></span>
+        <span class="label-grp"><label>LTV 3 mesi</label></span>
         <span class="value-grp"><span class="ctl"><input id="l3" type="number" step="0.05"/><span class="unit">×</span></span></span>
       </div>
       <div class="hint-row" id="l3hint"></div>
       <div class="row-input">
-        <span class="label-grp"><label>6-month LTV</label></span>
+        <span class="label-grp"><label>LTV 6 mesi</label></span>
         <span class="value-grp"><span class="ctl"><input id="l6" type="number" step="0.05"/><span class="unit">×</span></span></span>
       </div>
       <div class="hint-row" id="l6hint"></div>
       <div class="row-input">
-        <span class="label-grp"><label>12-month LTV</label></span>
+        <span class="label-grp"><label>LTV 12 mesi</label></span>
         <span class="value-grp"><span class="ctl"><input id="l12" type="number" step="0.05"/><span class="unit">×</span></span></span>
       </div>
       <div class="hint-row" id="l12hint"></div>
 
-      <div class="section-h">Modeling</div>
+      <div class="section-h">Modellazione</div>
       <div class="row-input">
-        <span class="label-grp"><label>Recency half-life</label><span class="tip" data-tip="How fast older days lose weight in the curve fit. 60d means a point 2 months ago counts half as much as today's. Lower = curve tracks recent regime tighter; higher = smooths across longer windows. Set to 0 to disable decay.">?</span></span>
-        <span class="value-grp"><span class="ctl"><input id="hl" type="number" step="15" min="0"/><span class="unit">d</span></span></span>
+        <span class="label-grp"><label>Emivita recency</label><span class="tip" data-tip="Quanto velocemente i giorni più vecchi perdono peso nel fit della curva. 60 giorni significa che un punto di 2 mesi fa conta la metà di oggi. Minore = la curva segue più da vicino il regime recente; maggiore = liscia su finestre più lunghe. Imposta a 0 per disabilitare il decadimento.">?</span></span>
+        <span class="value-grp"><span class="ctl"><input id="hl" type="number" step="15" min="0"/><span class="unit">g</span></span></span>
       </div>
       <div class="row-input">
-        <span class="label-grp"><label>Adstock decay</label><span class="tip" data-tip="Geometric carryover: yesterday's spend still influences today's revenue at rate λ. Steady-state effective spend = raw / (1−λ). Try 0.3 for typical Meta carryover, 0 to disable.">?</span></span>
+        <span class="label-grp"><label>Decadimento adstock</label><span class="tip" data-tip="Carryover geometrico: la spesa di ieri influenza ancora i ricavi di oggi al tasso λ. Spesa effettiva stazionaria = grezza / (1−λ). Prova 0,3 per il tipico carryover Meta, 0 per disabilitarlo.">?</span></span>
         <span class="value-grp"><span class="ctl"><input id="lam" type="number" step="0.05" min="0" max="0.95"/><span class="unit">λ</span></span></span>
       </div>
       <div class="row-input">
-        <span class="label-grp"><label>Efficiency adj.</label><span class="tip" data-tip="Manually scale V_max up or down. +10% = &quot;I expect the platform to deliver 10% better than the historical fit&quot; (creative refresh, new placement). −10% = the opposite. Pure scalar.">?</span></span>
+        <span class="label-grp"><label>Efficienza adj.</label><span class="tip" data-tip="Scala manualmente V_max verso l'alto o il basso. +10% = &quot;Mi aspetto che la piattaforma performi il 10% meglio del fit storico&quot; (aggiornamento creativo, nuovo posizionamento). −10% = il contrario. Scalare puro.">?</span></span>
         <span class="value-grp"><span class="ctl"><input id="eff" type="number" step="1"/><span class="unit">%</span></span></span>
       </div>
 
-      <div class="section-h">Current state</div>
+      <div class="section-h">Stato attuale</div>
       <div class="row-input">
-        <span class="label-grp"><label>Daily spend</label><span class="tip" data-tip="Where the &quot;today&quot; line sits on the chart and which spend ladder row gets the gray highlight. Auto-set to the average of your CSV's spend column on upload.">?</span></span>
+        <span class="label-grp"><label>Spesa giornaliera</label><span class="tip" data-tip="Dove si trova la riga &quot;oggi&quot; sul grafico e quale riga della tabella di spesa ottiene l'evidenziazione grigia. Impostata automaticamente alla media della colonna spesa del CSV al caricamento.">?</span></span>
         <span class="value-grp"><span class="ctl"><input id="cur" type="number" step="100"/><span class="unit">$</span></span></span>
       </div>
 
       <div class="toggles">
-        <div class="section-h" style="border:none; margin-top:0; padding-top:0">Show on chart</div>
-        <label class="toggle master"><span>3 + 6 + 12m CM (all)</span><input type="checkbox" id="tAll"/></label>
-        <label class="toggle"><span>3-month CM</span><input type="checkbox" id="t3"/></label>
-        <label class="toggle"><span>6-month CM</span><input type="checkbox" id="t6"/></label>
-        <label class="toggle"><span>12-month CM</span><input type="checkbox" id="t12"/></label>
-        <label class="toggle"><span>NC revenue</span><input type="checkbox" id="tNc"/></label>
+        <div class="section-h" style="border:none; margin-top:0; padding-top:0">Mostra nel grafico</div>
+        <label class="toggle master"><span>CM 3 + 6 + 12m (tutti)</span><input type="checkbox" id="tAll"/></label>
+        <label class="toggle"><span>CM 3 mesi</span><input type="checkbox" id="t3"/></label>
+        <label class="toggle"><span>CM 6 mesi</span><input type="checkbox" id="t6"/></label>
+        <label class="toggle"><span>CM 12 mesi</span><input type="checkbox" id="t12"/></label>
+        <label class="toggle"><span>Ricavi NC</span><input type="checkbox" id="tNc"/></label>
       </div>
     </div>
 
     <div class="atelier-section">
       <div class="chart-head">
-        <h2 style="margin:0">Saturation curve</h2>
+        <h2 style="margin:0">Curva di saturazione</h2>
         <div class="actions">
-          <button class="btn ghost" id="btnExportLadder" title="Download the spend ladder as a CSV">↓ Spend ladder CSV</button>
-          <button class="btn ghost" id="btnExportSummary" title="Download a one-line summary of the current model state">↓ Summary CSV</button>
+          <button class="btn ghost" id="btnExportLadder" title="Scarica la tabella di spesa come CSV">↓ CSV tabella di spesa</button>
+          <button class="btn ghost" id="btnExportSummary" title="Scarica un riepilogo dello stato attuale del modello">↓ CSV riepilogo</button>
         </div>
       </div>
       <svg id="chart" viewBox="0 0 800 360" preserveAspectRatio="none"></svg>
@@ -629,11 +629,11 @@ input[type=file] { display: none; }
       <div class="ladder-wrap">
         <table id="ladder">
           <thead><tr>
-            <th>Daily spend</th><th>Monthly spend</th><th>ROAS</th><th>NC ROAS</th>
-            <th>Monthly Revenue</th><th>Monthly NC Rev</th>
-            <th>Daily CM</th><th>Monthly CM</th><th>CMROAS</th>
-            <th>Daily Orders</th><th>New Customers</th>
-            <th>3m CM</th><th>6m CM</th><th>12m CM</th>
+            <th>Spesa giorn.</th><th>Spesa mens.</th><th>ROAS</th><th>ROAS NC</th>
+            <th>Ricavi mens.</th><th>Ricavi NC mens.</th>
+            <th>CM giorn.</th><th>CM mens.</th><th>CMROAS</th>
+            <th>Ordini giorn.</th><th>Nuovi clienti</th>
+            <th>CM 3m</th><th>CM 6m</th><th>CM 12m</th>
           </tr></thead>
           <tbody></tbody>
         </table>
@@ -750,10 +750,10 @@ const DEMO_CSV = `date,spend,revenue,purchases
 // ============================================================
 function parseCSV(text) {
   const lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n').filter(l => l.length > 0);
-  if (lines.length < 2) throw new Error('CSV needs a header row and at least one data row.');
+  if (lines.length < 2) throw new Error('Il CSV deve avere una riga di intestazione e almeno una riga di dati.');
   const header = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/^"|"$/g, ''));
   for (const col of ['date', 'spend', 'revenue']) {
-    if (!header.includes(col)) throw new Error(`Missing required column: "${col}". Header has: ${header.join(', ')}`);
+    if (!header.includes(col)) throw new Error(`Colonna obbligatoria mancante: "${col}". L'intestazione contiene: ${header.join(', ')}`);
   }
   const di = header.indexOf('date'), si = header.indexOf('spend'), ri = header.indexOf('revenue'), pi = header.indexOf('purchases');
 
@@ -784,7 +784,7 @@ function parseCSV(text) {
     if (seen.has(points[i].date)) continue;
     seen.add(points[i].date); out.unshift(points[i]);
   }
-  if (out.length < 8) throw new Error(`CSV needs at least 8 valid daily rows. Got ${out.length}.`);
+  if (out.length < 8) throw new Error(`Il CSV deve avere almeno 8 righe giornaliere valide. Trovate: ${out.length}.`);
   return out;
 }
 
@@ -904,7 +904,7 @@ const $ = (id) => document.getElementById(id);
 
 let DATA = null;
 const state = {
-  brand: 'My Brand',
+  brand: 'Il mio brand',
   month: new Date().getMonth(),
   goal: 'cm_3m',
   vc: 35, nc: 60, aov: 0,
@@ -954,7 +954,7 @@ function setupUpload() {
   const dz = $('dropzone');
 
   $('btnPick').addEventListener('click', () => input.click());
-  $('btnDemo').addEventListener('click', () => loadCSVText(DEMO_CSV, 'demo brand'));
+  $('btnDemo').addEventListener('click', () => loadCSVText(DEMO_CSV, 'brand demo'));
 
   input.addEventListener('change', (e) => {
     const f = e.target.files && e.target.files[0]; if (!f) return;
@@ -1022,7 +1022,7 @@ function bindInputs() {
     $(k).addEventListener('input', () => { state[k] = parseFloat($(k).value) || 0; render(); });
   });
   $('hl').addEventListener('input', () => { state.hl = parseFloat($('hl').value) || 0; refit(); });
-  $('brand').addEventListener('input', () => { state.brand = $('brand').value || 'Untitled'; render(); });
+  $('brand').addEventListener('input', () => { state.brand = $('brand').value || 'Senza nome'; render(); });
   $('month').addEventListener('change', () => { state.month = parseInt($('month').value, 10); render(); });
   $('goal').addEventListener('change', () => {
     state.goal = $('goal').value;
@@ -1109,10 +1109,10 @@ function exportLadderCSV() {
   if (!DATA) return;
   const tbody = $('ladder').querySelector('tbody');
   const headers = Array.from($('ladder').querySelectorAll('thead th')).map(th => th.textContent.trim());
-  const rows = [['# Saturation Studio · spend ladder export'],
+  const rows = [['# Saturation Studio · esportazione tabella di spesa'],
                 ['# brand', state.brand],
-                ['# month', new Date(2000, state.month, 1).toLocaleString('en-US', { month: 'long' })],
-                ['# generated', new Date().toISOString()],
+                ['# mese', new Date(2000, state.month, 1).toLocaleString('it-IT', { month: 'long' })],
+                ['# generato', new Date().toISOString()],
                 []];
   rows.push(headers);
   Array.from(tbody.querySelectorAll('tr')).forEach(tr => {
@@ -1133,42 +1133,42 @@ function exportSummaryCSV() {
   const opt3 = findOptimum(m * state.l3).s;
   const opt6 = findOptimum(m * state.l6).s;
   const opt12 = findOptimum(m * state.l12).s;
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const months = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
   const rows = [
-    ['Saturation Studio · model summary'],
+    ['Saturation Studio · riepilogo modello'],
     ['Brand', state.brand],
-    ['Generated', new Date().toISOString()],
-    ['Project month', months[state.month]],
-    ['Goal selected', state.goal],
+    ['Generato', new Date().toISOString()],
+    ['Mese proiettato', months[state.month]],
+    ['Obiettivo selezionato', state.goal],
     [],
-    ['# Inputs'],
-    ['Variable cost %', state.vc],
-    ['NC share %', state.nc],
-    ['Median AOV', state.aov],
-    ['3-month LTV multiplier', state.l3],
-    ['6-month LTV multiplier', state.l6],
-    ['12-month LTV multiplier', state.l12],
-    ['Recency half-life (days)', state.hl],
-    ['Adstock decay (lambda)', state.lam],
-    ['Efficiency adjust %', state.eff],
-    ['Target ROAS', state.tr],
-    ['Today\'s daily spend', state.cur],
+    ['# Parametri'],
+    ['Costo variabile %', state.vc],
+    ['Quota NC %', state.nc],
+    ['AOV mediano', state.aov],
+    ['Moltiplicatore LTV 3 mesi', state.l3],
+    ['Moltiplicatore LTV 6 mesi', state.l6],
+    ['Moltiplicatore LTV 12 mesi', state.l12],
+    ['Emivita recency (giorni)', state.hl],
+    ['Decadimento adstock (lambda)', state.lam],
+    ['Efficienza adj. %', state.eff],
+    ['ROAS target', state.tr],
+    ['Spesa giornaliera attuale', state.cur],
     [],
-    ['# Hill fit (this month)'],
-    ['V_max ($/day asymptote)', Math.round(Vmax)],
-    ['K (half-saturation spend)', Math.round(fit.K)],
-    ['h (curve shape)', fit.h.toFixed(3)],
-    ['R-squared', fit.r2.toFixed(3)],
-    ['Days fit on', fit.n],
-    ['Per-month or fallback', fit.fallback ? 'global w/ seasonality' : 'per-month'],
+    ['# Fit Hill (questo mese)'],
+    ['V_max (asintoto $/giorno)', Math.round(Vmax)],
+    ['K (spesa di semi-saturazione)', Math.round(fit.K)],
+    ['h (forma curva)', fit.h.toFixed(3)],
+    ['R-quadro', fit.r2.toFixed(3)],
+    ['Giorni del fit', fit.n],
+    ['Mensile o fallback', fit.fallback ? 'globale con stagionalità' : 'mensile'],
     [],
-    ['# Optima (raw $/day)'],
-    ['Max CM (today)', Math.round(optCm)],
-    ['Max 3-month CM', Math.round(opt3)],
-    ['Max 6-month CM', Math.round(opt6)],
-    ['Max 12-month CM', Math.round(opt12)],
-    ['Target ROAS @ ' + state.tr.toFixed(2) + 'x', state.tr >= peak ? 'unreachable (peak ' + peak.toFixed(2) + 'x)' : Math.round(trSpend)],
-    ['Model peak ROAS', peak.toFixed(3)],
+    ['# Ottimi ($/giorno grezzi)'],
+    ['Max CM (oggi)', Math.round(optCm)],
+    ['Max CM 3 mesi', Math.round(opt3)],
+    ['Max CM 6 mesi', Math.round(opt6)],
+    ['Max CM 12 mesi', Math.round(opt12)],
+    ['ROAS target @ ' + state.tr.toFixed(2) + 'x', state.tr >= peak ? 'irraggiungibile (picco ' + peak.toFixed(2) + 'x)' : Math.round(trSpend)],
+    ['ROAS di picco del modello', peak.toFixed(3)],
   ];
   downloadCSV(`${safeBrandSlug()}-model-summary-${new Date().toISOString().slice(0,10)}.csv`, rows);
 }
@@ -1231,26 +1231,26 @@ function findTargetRoasSpend(target) {
 // ============================================================
 function render() {
   if (!DATA) return;
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const months = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
   const days = daysInMonth(state.month);
   const fit = fitFor(state.month);
   const Vmax = vmaxFor(state.month);
 
-  $('title').textContent = (state.brand || 'Untitled') + ' · Saturation Model';
-  $('subtitle').textContent = 'Modeling ' + months[state.month] + ' · ' + DATA.points.length + ' days of data';
+  $('title').textContent = (state.brand || 'Senza nome') + ' · Modello di saturazione';
+  $('subtitle').textContent = 'Modellando ' + months[state.month] + ' · ' + DATA.points.length + ' giorni di dati';
   // Fit details: only show when something non-default is in play. Hidden
   // on the default view so the page reads clean. The Summary CSV always
   // carries V_max / K / h / R² for anyone who wants them.
   const notes = [];
   if (state.lam > 0) notes.push('adstock λ=' + state.lam.toFixed(2));
-  if (state.eff !== 0) notes.push('efficiency ' + (state.eff>0?'+':'') + state.eff + '%');
-  if (state.hl !== 60) notes.push('recency half-life ' + state.hl + 'd');
+  if (state.eff !== 0) notes.push('efficienza ' + (state.eff>0?'+':'') + state.eff + '%');
+  if (state.hl !== 60) notes.push('emivita recency ' + state.hl + 'g');
   $('fitnote').textContent = notes.length ? notes.join(' · ') : '';
 
   if (state.aov > 0) {
-    $('l3hint').textContent  = '≈ ' + fmtUsdFull(state.aov * state.l3)  + '/cust';
-    $('l6hint').textContent  = '≈ ' + fmtUsdFull(state.aov * state.l6)  + '/cust';
-    $('l12hint').textContent = '≈ ' + fmtUsdFull(state.aov * state.l12) + '/cust';
+    $('l3hint').textContent  = '≈ ' + fmtUsdFull(state.aov * state.l3)  + '/cliente';
+    $('l6hint').textContent  = '≈ ' + fmtUsdFull(state.aov * state.l6)  + '/cliente';
+    $('l12hint').textContent = '≈ ' + fmtUsdFull(state.aov * state.l12) + '/cliente';
   } else {
     $('l3hint').textContent = ''; $('l6hint').textContent = ''; $('l12hint').textContent = '';
   }
@@ -1261,17 +1261,17 @@ function render() {
   const peak = peakRoas();
   const trSpend = findTargetRoasSpend(state.tr);
   $('trhint').textContent = state.tr >= peak
-    ? 'unreachable. Model peak ROAS is ' + fmtX(peak)
-    : 'reachable at ' + fmtUsdFull(trSpend) + '/day (peak ' + fmtX(peak) + ')';
+    ? 'irraggiungibile. Il ROAS di picco del modello è ' + fmtX(peak)
+    : 'raggiungibile a ' + fmtUsdFull(trSpend) + '/giorno (picco ' + fmtX(peak) + ')';
 
   const goalsList = [
-    { key:'cm',     lbl:'Max CM (today)',    optS: findOptimum(m).s,            margin:m },
-    { key:'cm_3m',  lbl:'Max 3-month CM',    optS: findOptimum(m*state.l3).s,   margin:m*state.l3 },
-    { key:'cm_6m',  lbl:'Max 6-month CM',    optS: findOptimum(m*state.l6).s,   margin:m*state.l6 },
-    { key:'cm_12m', lbl:'Max 12-month CM',   optS: findOptimum(m*state.l12).s,  margin:m*state.l12 },
-    { key:'revenue', lbl:'Max Revenue',      optS: state.cur*5,                 margin:1 },
-    { key:'nc_rev', lbl:'Max NC Revenue',    optS: state.cur*5,                 margin:ncFrac },
-    { key:'target_roas', lbl:'Target ROAS @ ' + fmtX(state.tr), optS: trSpend, margin:m, unreachable: state.tr >= peak },
+    { key:'cm',     lbl:'Max CM (oggi)',      optS: findOptimum(m).s,            margin:m },
+    { key:'cm_3m',  lbl:'Max CM 3 mesi',      optS: findOptimum(m*state.l3).s,   margin:m*state.l3 },
+    { key:'cm_6m',  lbl:'Max CM 6 mesi',      optS: findOptimum(m*state.l6).s,   margin:m*state.l6 },
+    { key:'cm_12m', lbl:'Max CM 12 mesi',     optS: findOptimum(m*state.l12).s,  margin:m*state.l12 },
+    { key:'revenue', lbl:'Max Ricavi',         optS: state.cur*5,                 margin:1 },
+    { key:'nc_rev', lbl:'Max Ricavi NC',       optS: state.cur*5,                 margin:ncFrac },
+    { key:'target_roas', lbl:'ROAS target @ ' + fmtX(state.tr), optS: trSpend, margin:m, unreachable: state.tr >= peak },
   ];
   const goalById = Object.fromEntries(goalsList.map(g => [g.key, g]));
 
@@ -1282,7 +1282,7 @@ function render() {
     if (g.unreachable) {
       const div = document.createElement('div');
       div.className = 'tile' + (g.key === state.goal ? ' active' : '');
-      div.innerHTML = '<div class="lbl">' + g.lbl + '</div><div class="big" style="font-size:13px;color:var(--red)">unreachable</div><div class="sub">peak ROAS is ' + fmtX(peak) + '</div>';
+      div.innerHTML = '<div class="lbl">' + g.lbl + '</div><div class="big" style="font-size:13px;color:var(--red)">irraggiungibile</div><div class="sub">ROAS di picco: ' + fmtX(peak) + '</div>';
       tilesEl.appendChild(div); return;
     }
     const sEff = sRaw * gain;
@@ -1291,8 +1291,8 @@ function render() {
     const roas = sRaw > 0 ? r / sRaw : 0;
     const isUnprofitable = cm < 0;
     const headline = monthly ? fmtUsd(state.cur * days) : fmtUsdFull(sRaw);
-    const sub = monthly ? 'monthly @ ' + fmtUsdFull(state.cur) + '/day'
-                        : 'ROAS ' + fmtX(roas) + ' · CM ' + fmtUsd(cm) + '/d';
+    const sub = monthly ? 'mensile @ ' + fmtUsdFull(state.cur) + '/giorno'
+                        : 'ROAS ' + fmtX(roas) + ' · CM ' + fmtUsd(cm) + '/g';
     const div = document.createElement('div');
     div.className = 'tile' + (isUnprofitable && !monthly ? ' neg' : '') + (g.key === state.goal ? ' active' : '');
     div.innerHTML = '<div class="lbl">' + g.lbl + '</div><div class="big">' + headline + '</div><div class="sub">' + sub + '</div>';
@@ -1300,8 +1300,8 @@ function render() {
   }
   for (const g of goalsList.slice(0, 4)) tileFor(g, false);
   tileFor(goalById['target_roas'], false);
-  tileFor({ key:'__cur', lbl:'Current daily', optS: state.cur, margin:m }, false);
-  tileFor({ key:'__curMo', lbl:'Current monthly', optS: state.cur, margin:m }, true);
+  tileFor({ key:'__cur', lbl:'Attuale giornaliero', optS: state.cur, margin:m }, false);
+  tileFor({ key:'__curMo', lbl:'Attuale mensile', optS: state.cur, margin:m }, true);
 
   const activeOptS = goalById[state.goal] && !goalById[state.goal].unreachable ? goalById[state.goal].optS : state.cur;
   const anchor = Math.max(activeOptS || 0, state.cur, 1000);
@@ -1389,30 +1389,30 @@ function render() {
   lines.push('<line x1="' + P.l + '" y1="' + yDolPx(0) + '" x2="' + (W - P.r) + '" y2="' + yDolPx(0) + '" stroke="rgba(0,0,0,0.18)"/>');
   if (breakevenSpend && breakevenSpend >= xMin && breakevenSpend <= xMax) {
     lines.push('<line x1="' + xPx(breakevenSpend) + '" y1="' + P.t + '" x2="' + xPx(breakevenSpend) + '" y2="' + (P.t + innerH) + '" stroke="#1565c0" stroke-width="1"/>');
-    lines.push('<text x="' + (xPx(breakevenSpend) + 6) + '" y="' + (P.t + 12) + '" font-size="10" fill="#1565c0">breakeven</text>');
+    lines.push('<text x="' + (xPx(breakevenSpend) + 6) + '" y="' + (P.t + 12) + '" font-size="10" fill="#1565c0">pareggio</text>');
   }
   if (state.cur >= xMin && state.cur <= xMax) {
     lines.push('<line x1="' + xPx(state.cur) + '" y1="' + P.t + '" x2="' + xPx(state.cur) + '" y2="' + (P.t + innerH) + '" stroke="#666" stroke-dasharray="3 3" stroke-width="1"/>');
-    lines.push('<text x="' + (xPx(state.cur) + 6) + '" y="' + (P.t + 26) + '" font-size="10" fill="#444">today</text>');
+    lines.push('<text x="' + (xPx(state.cur) + 6) + '" y="' + (P.t + 26) + '" font-size="10" fill="#444">oggi</text>');
   }
   if (activeOptS && activeOptS >= xMin && activeOptS <= xMax) {
     lines.push('<line x1="' + xPx(activeOptS) + '" y1="' + P.t + '" x2="' + xPx(activeOptS) + '" y2="' + (P.t + innerH) + '" stroke="#B7410E" stroke-width="1.5"/>');
-    lines.push('<text x="' + (xPx(activeOptS) + 6) + '" y="' + (P.t + 40) + '" font-size="10" fill="#B7410E" font-weight="500">' + (goalById[state.goal] ? goalById[state.goal].lbl : 'optimum') + '</text>');
+    lines.push('<text x="' + (xPx(activeOptS) + 6) + '" y="' + (P.t + 40) + '" font-size="10" fill="#B7410E" font-weight="500">' + (goalById[state.goal] ? goalById[state.goal].lbl : 'ottimo') + '</text>');
   }
   $('chart').innerHTML = lines.join('');
 
   const leg = [
-    { c: '#E87A2D', t: 'Revenue', show: true, area: true },
-    { c: '#2d8a4e', t: 'CM/day',  show: true, area: true },
+    { c: '#E87A2D', t: 'Ricavi', show: true, area: true },
+    { c: '#2d8a4e', t: 'CM/giorno',  show: true, area: true },
     { c: '#1a1a1a', t: 'ROAS',    show: true },
-    { c: '#999',    t: 'Marginal ROAS', show: true, dash: true },
-    { c: '#1565c0', t: 'Breakeven spend', show: !!breakevenSpend },
-    { c: '#B7410E', t: 'Selected goal optimum', show: !!activeOptS && activeOptS >= xMin && activeOptS <= xMax },
-    { c: '#666',    t: 'Today', show: state.cur >= xMin && state.cur <= xMax, dash: true },
-    { c: '#9d6dff', t: '3-month CM',  show: state.show3,  area: true },
-    { c: '#5b4bb3', t: '6-month CM',  show: state.show6,  area: true },
-    { c: '#2a2370', t: '12-month CM', show: state.show12, area: true },
-    { c: '#a06600', t: 'NC revenue',  show: state.showNc, area: true },
+    { c: '#999',    t: 'ROAS marginale', show: true, dash: true },
+    { c: '#1565c0', t: 'Spesa di pareggio', show: !!breakevenSpend },
+    { c: '#B7410E', t: 'Ottimo obiettivo selezionato', show: !!activeOptS && activeOptS >= xMin && activeOptS <= xMax },
+    { c: '#666',    t: 'Oggi', show: state.cur >= xMin && state.cur <= xMax, dash: true },
+    { c: '#9d6dff', t: 'CM 3 mesi',  show: state.show3,  area: true },
+    { c: '#5b4bb3', t: 'CM 6 mesi',  show: state.show6,  area: true },
+    { c: '#2a2370', t: 'CM 12 mesi', show: state.show12, area: true },
+    { c: '#a06600', t: 'Ricavi NC',  show: state.showNc, area: true },
   ];
   $('legend').innerHTML = leg.filter(l => l.show).map(l => {
     let swatch;
@@ -1467,11 +1467,11 @@ function render() {
     tbody.appendChild(tr);
   }
 
-  $('foot').textContent = 'Hill saturation: revenue = V_max · s^h / (K^h + s^h). Optimum solves max [m · revenue(s) - s] where m = (1 - VC) · LTV. '
-    + 'Adstock applies steady-state gain s_eff = s_raw / (1 - λ). Per-month curves use only that month\'s daily observations when 8+ days exist; otherwise the global fit is scaled by month-of-year seasonality. '
-    + 'Recency half-life weights each day by 0.5^(days_back / half_life). Set to 0 for equal weighting. '
-    + 'Curve fit on ' + DATA.points.length + ' daily observations from ' + DATA.points[0].date + ' to ' + DATA.points[DATA.points.length-1].date + '. '
-    + 'All math runs locally in your browser; your CSV never leaves your device.';
+  $('foot').textContent = 'Saturazione Hill: revenue = V_max · s^h / (K^h + s^h). L\'ottimo risolve max [m · revenue(s) - s] dove m = (1 - VC) · LTV. '
+    + 'L\'adstock applica il guadagno stazionario s_eff = s_raw / (1 - λ). Le curve mensili usano solo le osservazioni giornaliere di quel mese quando esistono 8+ giorni; altrimenti il fit globale è scalato per stagionalità del mese. '
+    + 'L\'emivita recency pondera ogni giorno con 0,5^(giorni_indietro / emivita). Imposta a 0 per ponderazione uniforme. '
+    + 'Fit della curva su ' + DATA.points.length + ' osservazioni giornaliere dal ' + DATA.points[0].date + ' al ' + DATA.points[DATA.points.length-1].date + '. '
+    + 'Tutti i calcoli girano localmente nel browser; il tuo CSV non lascia mai il dispositivo.';
 }
 
 setupUpload();
